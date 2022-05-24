@@ -1,3 +1,5 @@
+import React from "react";
+
 import { useStateContext } from "../../context/StateContext";
 import "./featuredInfo.css";
 // import { ArrowDownward, ArrowUpward } from "@material-ui/icons";
