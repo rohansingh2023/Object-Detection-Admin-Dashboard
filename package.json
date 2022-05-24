@@ -30,7 +30,8 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "react/react-in-jsx-scope": "off",
+   "react/react-in-jsx-scope": "off",
+  "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }], 
     "extends": [
       "react-app",
       "react-app/jest"
