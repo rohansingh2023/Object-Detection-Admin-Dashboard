@@ -8,7 +8,9 @@
 
 .widgetSmTitle{
     font-size: 22px;
-    font-weight: 600;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
 .widgetSmImg{
@@ -29,6 +31,8 @@
     align-items: center;
     justify-content: space-between;
     margin: 20px 0px;
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .widgetSmUser{

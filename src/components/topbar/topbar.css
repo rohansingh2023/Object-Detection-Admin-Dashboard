@@ -1,10 +1,13 @@
 .topbar {
-  width: 100%;
+  width: 97%;
   height: 50px;
-  background-color: white;
+  background-color: #6C63FF;
   position: sticky;
   top: 0;
   z-index: 999;
+  margin: 20px;
+  border-radius: 7px;
+  padding: 5px;
 }
 
 .topbarWrapper {
@@ -18,7 +21,8 @@
 .logo {
   font-weight: bold;
   font-size: 30px;
-  color: darkblue;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   cursor: pointer;
 }
 

@@ -7,12 +7,17 @@
 
 .widgetLgTitle {
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
 .widgetLgTable{
   width: 100%;
   border-spacing: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: large;
+
 }
 
 .widgetLgTh{
