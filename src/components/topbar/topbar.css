@@ -38,6 +38,11 @@
   color: #555;
 }
 
+.topbarIconButton:hover{
+  background-color: #6C63FF;
+  
+}
+
 .topIconBadge{
     width: 15px;
     height: 15px;

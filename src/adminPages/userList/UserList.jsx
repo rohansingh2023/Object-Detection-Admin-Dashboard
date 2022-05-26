@@ -1,48 +1,25 @@
+import React from "react";
+
 import "./userList.css";
-// import { DataGrid } from "@material-ui/data-grid";
-import { DataGrid } from "@mui/x-data-grid";
-// import { DeleteOutline } from "@material-ui/icons";
-import { userRows } from "../../dummyData";
-import { Link, Navigate, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Topbar from "../../components/topbar/Topbar";
 import { useStateContext } from "../../context/StateContext";
 
 export default function UserList() {
   const { users } = useStateContext();
-  const [data, setData] = useState(userRows);
   const navigate = useNavigate();
-
-  const handleDelete = (id) => {
-    setData(data.filter((item) => item.id !== id));
-  };
 
   console.log(users);
 
   return (
     <>
       <Topbar />
-      {/* <Sidebar /> */}
       <div className="userApp">
         <div className="userList_sidebar">
           <Sidebar />
         </div>
-        {/* <DataGrid
-        rows={data}
-        disableSelectionOnClick
-        columns={columns}
-        pageSize={5}
-        checkboxSelection
-      /> */}
-        {/* <DataGrid
-          rows={data}
-          columns={columns}
-          pageSize={8}
-          rowsPerPageOptions={[5]}
-          checkboxSelection
-          disableSelectionOnClick
-        /> */}
+
         <div className="userList">
           <table>
             <tr>

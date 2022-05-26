@@ -47,7 +47,7 @@
     margin-top: 10px;
     width: 85%;
     height: 40px;
-    color: lightgray;
+    color: black;
     font-size: x-large;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 300;
@@ -69,7 +69,7 @@
     margin-top: 10px;
     width: 85%;
     height: 40px;
-    color: lightgray;
+    color: black;
     font-size: x-large;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 300;
@@ -88,6 +88,12 @@
     font-size: x-large;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 700;
+}
+
+.register_body_form > button:hover{
+    background-color: #bb0a0d;
+
+
 }
 
 .register_body_form_ends{
@@ -122,4 +128,13 @@
     font-size: larger;
     border-radius: 7px;
 
+}
+
+@media only screen and (max-width: 1100px){
+    .register_img{
+        display: none;
+    }
+    .register_body_form{
+        margin-top: 20px;
+    }
 }

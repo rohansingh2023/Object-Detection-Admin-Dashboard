@@ -50,6 +50,9 @@ const User = () => {
   const handleLogout = (e) => {
     e.preventDefault();
     localStorage.removeItem("userStatus");
+    alert(
+      "User Logged out successfully.If it doesn't redirect to '/userLogin' then refresh"
+    );
     navigate("/userLogin");
   };
 

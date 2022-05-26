@@ -1,11 +1,11 @@
+import React from "react";
+
 import { useEffect, useState } from "react";
-import { useStateContext } from "../../context/StateContext";
 import { publicRequest } from "../../requestMethod";
 import "./widgetSm.css";
 
 export default function WidgetSm() {
   const [users, setUsers] = useState([]);
-  const { users2 } = useStateContext();
 
   useEffect(() => {
     const getUsers = async () => {
@@ -26,7 +26,7 @@ export default function WidgetSm() {
       <span className="widgetSmTitle">New Join Members</span>
       <ul className="widgetSmList">
         {users.map((user) => (
-          <li className="widgetSmListItem">
+          <li className="widgetSmListItem" key={user._id}>
             {/* <img
             src="https://images.pexels.com/photos/3992656/pexels-photo-3992656.png?auto=compress&cs=tinysrgb&dpr=2&w=500"
             alt=""

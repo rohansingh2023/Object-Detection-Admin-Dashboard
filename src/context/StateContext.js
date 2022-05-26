@@ -1,6 +1,4 @@
 import React, { useContext, createContext, useState, useEffect } from "react";
-import axios from "axios";
-import { Navigate } from "react-router-dom";
 import { publicRequest } from "../requestMethod";
 
 const Context = createContext();
@@ -8,7 +6,6 @@ const Context = createContext();
 export const StateContext = ({ children }) => {
   const [user, setUser] = useState([]);
   const [users, setUsers] = useState([]);
-  const [admin, setAdmin] = useState([]);
   const [islogged, setIslogged] = useState(false);
 
   const register = async (username, email, password, navigate) => {
@@ -22,9 +19,10 @@ export const StateContext = ({ children }) => {
       setIslogged(true);
       localStorage.setItem("userCreds", res.data.token);
       localStorage.setItem("userStatus", res.data.success);
+      alert("User Registered successfully. Refresh to go to '/'");
       navigate("/");
     } catch (error) {
-      alert(error.message);
+      alert(error.response.data.msg);
     }
   };
 
@@ -38,9 +36,10 @@ export const StateContext = ({ children }) => {
       setIslogged(true);
       localStorage.setItem("userCreds", res.data.token);
       localStorage.setItem("userStatus", res.data.success);
+      alert("User Logged in successfully");
       navigate("/");
     } catch (error) {
-      alert(error.message);
+      alert(error.response.data.msg);
     }
   };
 
@@ -50,13 +49,12 @@ export const StateContext = ({ children }) => {
         email,
         password,
       });
-      console.log(res.data);
-      setAdmin(res.data);
       localStorage.setItem("adminCreds", res.data.token);
       localStorage.setItem("adminStatus", res.data.success);
+      alert("Admin Logged in successfully");
       navigate("/dashboard");
     } catch (error) {
-      alert(error.message);
+      alert(error.response.data.msg);
     }
   };
 

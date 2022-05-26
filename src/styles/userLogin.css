@@ -142,6 +142,10 @@
     font-weight: 700;
 }
 
+.login_body_form > button:hover{
+    background-color: #bb0a0d;
+}
+
 .login_body_form_ends{
     margin-left: 10px;
     margin-top: 40px;
@@ -173,4 +177,14 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: larger;
     border-radius: 7px;
+}
+
+@media only screen and (max-width: 1100px){
+    .login_body_img{
+        display: none;
+    }
+
+    .login_body_form{
+        margin-top: 40px;
+    }
 }

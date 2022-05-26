@@ -22,7 +22,7 @@
 }
 
 .headers > button:hover{
-    background-color: red;
+    background-color: rgb(119, 5, 5);
 }
 
 .headers > h2{
@@ -70,7 +70,7 @@
 }
 
 .user_detect > form > button:hover{
-    background-color: rgb(50, 50, 190);
+    background-color: rgb(76, 76, 231);
 }
 
 .detect_images{
