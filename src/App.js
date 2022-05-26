@@ -1,10 +1,10 @@
+import React from "react";
 import "./App.css";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Userlogin from "./pages/Userlogin";
 import Adminlogin from "./pages/Adminlogin";
 import Userregister from "./pages/Userregister";
 import User from "./pages/User";
-import { useStateContext } from "./context/StateContext";
 import { PrivateRoute } from "./PrivateRoute";
 import PublicRoute from "./PublicRoute";
 import Admin from "./pages/Admin";
