@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useStateContext } from "../context/StateContext";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import "../styles/userRegister.css";
 import RegisterSVG from "../assests/s2.svg";
 
@@ -10,6 +10,11 @@ const Userregister = () => {
     email: "",
     password: "",
   });
+  const islogged = localStorage.getItem("userCreds");
+
+  if (islogged) {
+    return <Navigate to="/" />;
+  }
 
   const { register } = useStateContext();
   const navigate = useNavigate();
