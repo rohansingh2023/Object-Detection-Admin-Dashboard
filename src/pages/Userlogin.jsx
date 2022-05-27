@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useStateContext } from "../context/StateContext";
 import "../styles/userLogin.css";
 import { BiUserCircle } from "react-icons/bi";
@@ -13,6 +13,11 @@ const Userlogin = () => {
 
   const { login } = useStateContext();
   const navigate = useNavigate();
+  const islogged = localStorage.getItem("userCreds");
+
+  if (islogged) {
+    return <Navigate to="/" />;
+  }
 
   const handleLogin = (e) => {
     e.preventDefault();

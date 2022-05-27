@@ -18,8 +18,8 @@ export const StateContext = ({ children }) => {
       setUser(res.data);
       setIslogged(true);
       localStorage.setItem("userCreds", res.data.token);
-      localStorage.setItem("userStatus", res.data.success);
-      alert("User Registered successfully. Refresh to go to '/'");
+      // localStorage.setItem("userStatus", res.data.success);
+      alert("User Registered successfully. ");
       navigate("/");
     } catch (error) {
       alert(error.response.data.msg);
@@ -35,9 +35,9 @@ export const StateContext = ({ children }) => {
       setUser(res.data.token);
       setIslogged(true);
       localStorage.setItem("userCreds", res.data.token);
-      localStorage.setItem("userStatus", res.data.success);
-      alert("User Logged in successfully");
+      // localStorage.setItem("userStatus", res.data.success);
       navigate("/");
+      alert("User Logged in successfully");
     } catch (error) {
       alert(error.response.data.msg);
     }
@@ -50,7 +50,7 @@ export const StateContext = ({ children }) => {
         password,
       });
       localStorage.setItem("adminCreds", res.data.token);
-      localStorage.setItem("adminStatus", res.data.success);
+      // localStorage.setItem("adminStatus", res.data.success);
       alert("Admin Logged in successfully");
       navigate("/dashboard");
     } catch (error) {

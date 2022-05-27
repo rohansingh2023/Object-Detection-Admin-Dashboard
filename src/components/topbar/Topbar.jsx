@@ -8,10 +8,8 @@ export default function Topbar() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    localStorage.removeItem("adminStatus");
-    alert(
-      "Admin Logged out successfully. If it doesn't redirect to '/adminLogin' then refresh"
-    );
+    localStorage.removeItem("adminCreds");
+    alert("Admin Logged out successfully.");
     navigate("/adminLogin");
   };
 

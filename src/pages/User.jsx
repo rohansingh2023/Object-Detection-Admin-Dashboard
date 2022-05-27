@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import FileBase from "react-file-base64";
 import "../styles/user.css";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const User = () => {
   const [postImage, setPostImage] = useState({
@@ -12,6 +12,11 @@ const User = () => {
   const [response2, setResponse2] = useState("");
   const [showText, setShowText] = useState(true);
   const navigate = useNavigate();
+  const islogged = localStorage.getItem("userCreds");
+
+  if (!islogged) {
+    return <Navigate to="/userLogin" />;
+  }
 
   const handleDetection = async (e) => {
     e.preventDefault();
@@ -49,10 +54,8 @@ const User = () => {
 
   const handleLogout = (e) => {
     e.preventDefault();
-    localStorage.removeItem("userStatus");
-    alert(
-      "User Logged out successfully.If it doesn't redirect to '/userLogin' then refresh"
-    );
+    localStorage.removeItem("userCreds");
+    alert("User Logged out successfully.");
     navigate("/userLogin");
   };
 
