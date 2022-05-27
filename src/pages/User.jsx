@@ -30,7 +30,6 @@ const User = () => {
       setResponse(res.data);
       setShowText(false);
     } catch (error) {
-      console.log(postImage.myFile);
       console.log(error.message);
     }
   };
@@ -47,7 +46,6 @@ const User = () => {
       setResponse2(res.data);
       setShowText(false);
     } catch (error) {
-      console.log(postImage.myFile);
       console.log(error.message);
     }
   };

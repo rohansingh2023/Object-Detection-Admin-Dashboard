@@ -2,22 +2,6 @@ import React from "react";
 import "./widgetLg.css";
 
 export default function WidgetLg() {
-  // const [orders, setOrders] = useState([]);
-
-  // useEffect(() => {
-  //   const getUsers = async () => {
-  //     try {
-  //       const res = await userRequest.get("orders/getallorders");
-  //       setOrders(res.data);
-  //     } catch (error) {
-  //       console.log(error.message);
-  //     }
-  //   };
-  //   getUsers();
-  // }, []);
-
-  // console.log(orders);
-
   const Button = ({ type }) => {
     return <button className={"widgetLgButton " + type}>200</button>;
   };

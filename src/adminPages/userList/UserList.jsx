@@ -10,8 +10,6 @@ export default function UserList() {
   const { users } = useStateContext();
   const navigate = useNavigate();
 
-  console.log(users);
-
   return (
     <>
       <Topbar />

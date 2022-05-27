@@ -19,28 +19,17 @@ export default function WidgetSm() {
     getUsers();
   }, []);
 
-  // console.log(users);
-
   return (
     <div className="widgetSm">
       <span className="widgetSmTitle">New Join Members</span>
       <ul className="widgetSmList">
         {users.map((user) => (
           <li className="widgetSmListItem" key={user._id}>
-            {/* <img
-            src="https://images.pexels.com/photos/3992656/pexels-photo-3992656.png?auto=compress&cs=tinysrgb&dpr=2&w=500"
-            alt=""
-            className="widgetSmImg"
-          /> */}
             <p>{user._id.slice(0, 10).concat("...")}</p>
             <div className="widgetSmUser">
               <span className="widgetSmUsername">{user.username}</span>
-              {/* <span className="widgetSmUserTitle">Software Engineer</span> */}
             </div>
-            <button className="widgetSmButton">
-              {/* <Visibility className="widgetSmIcon" /> */}
-              Display
-            </button>
+            <button className="widgetSmButton">Display</button>
           </li>
         ))}
       </ul>
