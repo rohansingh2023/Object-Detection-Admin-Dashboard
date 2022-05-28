@@ -5,9 +5,10 @@ import { useNavigate } from "react-router-dom";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Topbar from "../../components/topbar/Topbar";
 import { useStateContext } from "../../context/StateContext";
+import { AiFillDelete } from "react-icons/ai";
 
 export default function UserList() {
-  const { users } = useStateContext();
+  const { users, deleteUser } = useStateContext();
   const navigate = useNavigate();
 
   return (
@@ -25,6 +26,7 @@ export default function UserList() {
               <th>NAME</th>
               <th>EMAIL</th>
               <th>PROFILE</th>
+              <th>DELETE</th>
             </tr>
             {users.map((val) => {
               return (
@@ -39,6 +41,14 @@ export default function UserList() {
                     >
                       View
                     </button>
+                  </td>
+                  <td>
+                    <AiFillDelete
+                      size={25}
+                      onClick={() => {
+                        deleteUser(val._id);
+                      }}
+                    />
                   </td>
                 </tr>
               );
