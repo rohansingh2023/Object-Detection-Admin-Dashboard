@@ -70,9 +70,20 @@ export const StateContext = ({ children }) => {
     getAllUsers();
   }, []);
 
+  const deleteUser = async (id) => {
+    try {
+      const res = await publicRequest.delete(`/user/${id}`);
+      setUsers(users.filter((id) => id === res.data.user._id));
+      alert("User Deleted Successfully");
+      window.location.reload();
+    } catch (error) {
+      alert(error.response.data.msg);
+    }
+  };
+
   return (
     <Context.Provider
-      value={{ register, login, user, islogged, adminLogin, users }}
+      value={{ register, login, user, islogged, adminLogin, users, deleteUser }}
     >
       {children}
     </Context.Provider>

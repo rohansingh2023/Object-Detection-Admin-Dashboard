@@ -1,11 +1,3 @@
-// import {
-//   CalendarToday,
-//   LocationSearching,
-//   MailOutline,
-//   PermIdentity,
-//   PhoneAndroid,
-//   Publish,
-// } from "@material-ui/icons";
 import React from "react";
 
 import { Link, useLocation } from "react-router-dom";
@@ -17,6 +9,7 @@ import { DataGrid } from "@mui/x-data-grid";
 import { useEffect, useState } from "react";
 import { publicRequest } from "../../requestMethod";
 import { userData } from "../../dummyData";
+import { IoArrowBack } from "react-icons/io5";
 
 export default function UserInfo() {
   const [user, setUser] = useState([]);
@@ -54,15 +47,17 @@ export default function UserInfo() {
       <Topbar />
       <div className="user">
         <div className="userTitleContainer">
+          <Link to="/users">
+            <IoArrowBack size={30} />
+          </Link>
           <h1 className="userTitle">User Details</h1>
-          <Link to="/newUser"></Link>
         </div>
         <div className="userContainer">
           <div className="userShow">
             <div className="userShowTop">
               <div className="userShowTopTitle">
                 <span className="userShowUsername">{user.username}</span>
-                <span className="userShowUserTitle">Software Engineer</span>
+                <span className="userShowUserTitle">Regular User</span>
               </div>
             </div>
             <div className="userShowBottom">

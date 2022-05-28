@@ -3,6 +3,7 @@ import { useStateContext } from "../context/StateContext";
 import { Link, useNavigate } from "react-router-dom";
 import "../styles/adminLogin.css";
 import AdminSVG from "../assests/s4.svg";
+import { IoArrowBack } from "react-icons/io5";
 
 const Adminlogin = () => {
   const [input, setInput] = useState({
@@ -25,6 +26,9 @@ const Adminlogin = () => {
 
   return (
     <div className="admin">
+      <Link to="/userLogin" className="backBtn">
+        <IoArrowBack size={35} />
+      </Link>
       <div className="admin_img">
         <img src={AdminSVG} alt="" />
       </div>

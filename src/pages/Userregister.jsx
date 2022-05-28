@@ -3,6 +3,7 @@ import { useStateContext } from "../context/StateContext";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import "../styles/userRegister.css";
 import RegisterSVG from "../assests/s2.svg";
+import { IoArrowBack } from "react-icons/io5";
 
 const Userregister = () => {
   const [input, setInput] = useState({
@@ -31,6 +32,9 @@ const Userregister = () => {
 
   return (
     <div className="register">
+      <Link to="/userLogin" className="backBtn">
+        <IoArrowBack size={35} />
+      </Link>
       <div className="register_img">
         <img
           src={RegisterSVG}
