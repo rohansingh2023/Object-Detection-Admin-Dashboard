@@ -18,3 +18,4 @@ You may also see any lint errors in the console.
 
 Do this to install all required dependencies from package.json after cloning it.
 
+Live:- https://object-detection-admin-dashboard-refreshed.vercel.app/
